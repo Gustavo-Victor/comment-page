@@ -39,19 +39,26 @@ To start cloning, using and modifying this project you will need to have basic k
     $ cd introduction-to-react/
 
     # Install dependencies
-    npm install
+    yarn install
 
     # Run the application
-    npm start 
+    yarn start 
 
     # The server by default will start on port 3000. Access in your browser: localhost:3000
 ```
 
 ## 🛠 Features 
+### Languages and Libraries 
+- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+- [JavaScript](https://www.javascript.com/)
+- [React](https://pt-br.reactjs.org/)
+    - [Create React App](https://create-react-app.dev/)
+    - [React Icons](https://react-icons.github.io/react-icons/)
+    - [Styled Components](https://styled-components.com/)
 
-- [ReactJS](https://pt-br.reactjs.org/)
-- [Create React App](https://create-react-app.dev/)
-- [React Icons](https://react-icons.github.io/react-icons/)
+###  Utilities 
+- **Fonts**: [Roboto](https://fonts.google.com/specimen/Roboto) 
 ## 🦸 Author
 
 Made with ❤️ by [Gustavo Victor](https://github.com/Gustavo-Victor)

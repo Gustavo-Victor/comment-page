@@ -1,6 +1,6 @@
-import './App.css';
 import logo from './img/people.svg';
 import {useState} from 'react';
+import {Button, MainDiv} from './components/styles';
 import {FaTrash} from 'react-icons/fa';
 
 function App() {
@@ -21,25 +21,24 @@ function App() {
   function deleteComment(index){
     const permission = window.confirm('Tem certeza que deseja apagar este comentário?');
     if(permission){      
-      allComments.splice(index, 1);
-      setAllComments(allComments);      
-      window.alert('Comentário excluído com sucesso!');
+      const newArray = allComments.filter((c) => c != allComments[index]);
+      setAllComments(newArray);
     }
   }
 
   return (
-    <div className="App">
+    <MainDiv>
       <img src={logo} title='Logo' id='logo' alt='Logo'/>
-      <textarea onChange={handleChange} placeholder='Seu comentário aqui...' value={comment} id='comment' name='comment' />
-      <button onClick={newComment} id='submit'>Comentar</button>
+      <textarea onChange={handleChange} placeholder='Seu comentário aqui...' value={comment} id='comment' name='comment'/>
+      <Button isOn={comment} onClick={newComment} id='submit'>Comentar</Button>
 
       {allComments.length > 0 && ( 
       <ul className='comment-list'>
         {allComments.map((comment, index) => (
-          <li key={index}>{comment} <span onClick={() => {deleteComment(index)}}><FaTrash/></span></li>
+          <li key={index}>{comment} <span onClick={() => {deleteComment(index)}}><FaTrash /></span></li>
         ))}
       </ul>)}
-    </div>
+    </MainDiv>
   );
 }
 
